@@ -53,4 +53,5 @@ RUN apt-get update && \
     acl \
     libjson-glib-dev \
     libusb-1.0-0-dev \
+    libgmp-dev \
     libftdi-dev

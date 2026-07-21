@@ -1,4 +1,4 @@
-FROM arm64v8/ubuntu:20.04
+FROM --platform=linux/arm64 ubuntu:20.04
 
 LABEL org.opencontainers.image.source https://github.com/tpm2-software/tpm2-software-container
 

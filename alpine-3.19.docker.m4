@@ -59,7 +59,7 @@ RUN apk update && \
     libftdi1-dev
 
 include(`autoconf.m4')
-include(`ibmtpm1637.m4')
+include(`ibmtpm1682.m4')
 include(`swtpm.m4')
 
 WORKDIR /

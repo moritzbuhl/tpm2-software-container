@@ -66,7 +66,7 @@ RUN dnf -y install \
 
 include(`pip3.m4')
 include(`autoconf.m4')
-include(`ibmtpm1637.m4')
+include(`ibmtpm1682.m4')
 include(`swtpm.m4')
 include(`uthash.m4')
 include(`junit.m4')

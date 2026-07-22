@@ -7,7 +7,7 @@ RUN git clone --depth 1 --branch ${MBEDTLS_VERSION} --recurse-submodules --shall
 
 WORKDIR /tmp/mbedtls
 
-RUN make -j \
+RUN pip3 install --no-cache-dir --break-system-packages -r scripts/basic.requirements.txt \
 	&& make -j \
 	&& make install \
 	&& ldconfig

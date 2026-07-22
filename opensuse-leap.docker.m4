@@ -23,7 +23,7 @@ RUN zypper -n in \
     lcov \
     libcurl-devel \
     vim \
-    clang7-checker \
+    clang-tools \
     sqlite3-devel \
     dbus-1-devel \
     dbus-1-x11 \
@@ -43,8 +43,8 @@ RUN zypper -n in \
     libyaml-devel \
     mozilla-nss-tools \
     opensc \
-    java-11-openjdk-devel \
-    java-11-openjdk \
+    java-17-openjdk-devel \
+    java-17-openjdk \
     libffi-devel \
     patch \
     sqlite3 \

@@ -9,6 +9,7 @@ RUN zypper -n in \
     net-tools \
     git \
     pkg-config \
+    python3-pip \
     gcc \
     m4 \
     libtool \
@@ -59,21 +60,10 @@ RUN zypper -n in \
     gmp-devel
 
 include(`autoconf.m4')
-include(`python3.7.2.m4')
 
 include(`rust.m4')
 
-# Some other packages bring in python and python3, which at this time is too old, so we want
-# python3 to be the 3.7 version just installed.
-RUN update-alternatives --install /usr/bin/python3 python3 /usr/local/bin/python3.7 0
-
 include(`pip3.m4')
-
-# Fix Automake AM_PYTHON_PATH missing python3.7 interpreter
-COPY patches/python.patch /tmp/python.patch
-RUN stat /usr/share/aclocal-1.15/python.m4
-RUN patch -d / -p1 < /tmp/python.patch
-RUN rm /tmp/python.patch
 
 include(`ibmtpm1682.m4')
 

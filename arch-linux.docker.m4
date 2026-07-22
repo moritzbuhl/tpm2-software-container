@@ -27,7 +27,6 @@ RUN pacman -Sy --noconfirm \
     libltdl \
     libusb \
     libftdi \
-    ibm-sw-tpm2 \
     swtpm \
     pkgfile \
     glib2 \
@@ -37,8 +36,10 @@ RUN pacman -Sy --noconfirm \
     expect \
     perl \
     pandoc \
-    lcov
+    lcov \
+    wget
 RUN ln -s /usr/bin/core_perl/shasum /usr/bin/
+include(`ibmtpm1682.m4')
 
 WORKDIR /
  

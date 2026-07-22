@@ -1,6 +1,6 @@
 ARG ibmtpm_name=ibmtpm1682
 RUN cd /tmp \
-	&& wget $WGET_EXTRA_FLAGS -L "https://downloads.sourceforge.net/project/ibmswtpm2/$ibmtpm_name.tar.gz" \
+	&& wget $WGET_EXTRA_FLAGS "https://downloads.sourceforge.net/project/ibmswtpm2/$ibmtpm_name.tar.gz" \
 	&& sha1sum $ibmtpm_name.tar.gz | grep ^651800d0b87cfad55b004fbdace4e41dce800a61 \
 	&& mkdir -p $ibmtpm_name \
 	&& tar xv --no-same-owner -f $ibmtpm_name.tar.gz -C $ibmtpm_name \
